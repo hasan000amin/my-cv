@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My CV - Portfolio</title>
+    <title>Bahlil Si Rajagukguk - CV</title>
     <link rel="stylesheet" href="output.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
     </style>
     <script>
-      // Check localStorage for theme preference on load
       if (localStorage.getItem("theme") === "light") {
         document.documentElement.classList.remove("dark");
       }
@@ -24,178 +23,85 @@
     >
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <span class="text-xl font-bold gradient-text">MyCV</span>
+          <span class="text-xl font-bold gradient-text">BR</span>
           <div class="flex items-center gap-6">
             <div class="hidden md:flex items-center gap-6">
-              <a
-                href="#about"
-                class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >About</a
-              >
-              <a
-                href="#experience"
-                class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >Experience</a
-              >
-              <a
-                href="#education"
-                class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >Education</a
-              >
-              <a
-                href="#skills"
-                class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >Skills</a
-              >
-              <a
-                href="#projects"
-                class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >Projects</a
-              >
-              <a
-                href="#contact"
-                class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                >Contact</a
-              >
+              <a href="#about" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">About</a>
+              <a href="#experience" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Experience</a>
+              <a href="#education" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Education</a>
+              <a href="#skills" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Skills</a>
+              <a href="#projects" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Projects</a>
+              <a href="#testimonials" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Testimonials</a>
+              <a href="#contact" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Contact</a>
             </div>
-            <!-- Dark Mode Toggle -->
             <button
               id="theme-toggle"
               class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle theme"
             >
-              <!-- Sun icon -->
-              <svg
-                id="sun-icon"
-                class="hidden dark:block w-5 h-5 text-yellow-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                />
+              <svg id="sun-icon" class="hidden dark:block w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
-              <!-- Moon icon -->
-              <svg
-                id="moon-icon"
-                class="block dark:hidden w-5 h-5 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                />
+              <svg id="moon-icon" class="block dark:hidden w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
             </button>
-            <!-- Mobile Menu Button -->
             <button
               id="menu-toggle"
               class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle menu"
             >
-              <svg
-                class="w-5 h-5 text-gray-600 dark:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+              <svg class="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
         </div>
       </div>
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden border-t border-gray-200 dark:border-gray-700"
-      >
+      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700">
         <div class="px-4 py-3 space-y-2">
-          <a
-            href="#about"
-            class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >About</a
-          >
-          <a
-            href="#experience"
-            class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >Experience</a
-          >
-          <a
-            href="#education"
-            class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >Education</a
-          >
-          <a
-            href="#skills"
-            class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >Skills</a
-          >
-          <a
-            href="#projects"
-            class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >Projects</a
-          >
-          <a
-            href="#contact"
-            class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >Contact</a
-          >
+          <a href="#about" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">About</a>
+          <a href="#experience" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Experience</a>
+          <a href="#education" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Education</a>
+          <a href="#skills" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Skills</a>
+          <a href="#projects" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Projects</a>
+          <a href="#testimonials" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Testimonials</a>
+          <a href="#contact" class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Contact</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-16 px-4">
-      <div class="text-center max-w-3xl mx-auto">
-        <div class="mb-8">
+    <section class="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-600/5 dark:from-blue-500/10 dark:to-purple-600/10 pointer-events-none"></div>
+      <div class="text-center max-w-3xl mx-auto relative">
+        <div class="mb-8 fade-in-scale visible">
           <img
-            src="https://ui-avatars.com/api/?name=John+Doe&size=180&background=4F46E5&color=fff&bold=true"
+            src="https://ui-avatars.com/api/?name=Bahlil+Si+Rajagukguk&size=180&background=4F46E5&color=fff&bold=true"
             alt="Profile"
-            class="w-36 h-36 rounded-full mx-auto border-4 border-blue-500 shadow-lg"
+            class="w-36 h-36 rounded-full mx-auto border-4 border-blue-500 shadow-lg glow"
           />
         </div>
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">
-          BAHLIL
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text fade-in visible">
+          BAHIL SI RAJAGUKGUK
         </h1>
-        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-6">
-          Full Stack Developer
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-6 fade-in visible delay-200">
+          <span id="typing-text" class="typing-cursor"></span>
         </p>
-        <p
-          class="text-base md:text-lg text-gray-500 dark:text-gray-500 mb-8 max-w-xl mx-auto leading-relaxed"
-        >
-          Passionate about building scalable web applications with modern
-          technologies. Experienced in React, Node.js, and cloud infrastructure.
+        <p class="text-base md:text-lg text-gray-500 dark:text-gray-500 mb-8 max-w-xl mx-auto leading-relaxed fade-in visible delay-300">
+          Berpengalaman dalam mengatur berbagai urusan, dari yang remeh-temeh sampai yang bikin pusing tujuh keliling. 
+          Ahli dalam menyelesaikan masalah dengan pendekatan yang tidak biasa — tapi hasilnya bikin senyum.
         </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a
-            href="#contact"
-            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-          >
+        <div class="flex flex-wrap justify-center gap-4 fade-in visible delay-400">
+          <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-blue-500/25">
             Contact Me
           </a>
-          <a
-            href="#projects"
-            class="px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-colors"
-          >
+          <a href="#projects" class="px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-colors">
             View Projects
           </a>
           <button
             onclick="window.print()"
-            class="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
+            class="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors no-print"
           >
             Download CV
           </button>
@@ -206,93 +112,68 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
           <span class="gradient-text">About Me</span>
         </h2>
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div class="fade-in-left">
             <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              I am a dedicated Full Stack Developer with 5+ years of experience
-              building robust and scalable applications. I specialize in
-              JavaScript/TypeScript ecosystem and have a strong passion for
-              creating intuitive user interfaces.
+              Saya adalah seorang <strong>Mentri Segala Urusan</strong> dengan pengalaman bertahun-tahun 
+              dalam menangani berbagai macam masalah — dari teknis, non-teknis, sampai masalah hati. 
+              Spesialisasi saya adalah <em>getting things done</em> dengan cara yang efisien dan penuh kreativitas.
             </p>
             <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              I believe in writing clean, maintainable code and following best
-              practices. When not coding, I enjoy contributing to open-source
-              projects and exploring new technologies.
+              Percaya bahwa setiap masalah itu unik, dan solusi terbaik datang dari sudut pandang yang segar. 
+              Di luar urusan pekerjaan, saya suka belajar hal baru, ngopi, dan kadang-kadang merenung 
+              sambil memandang langit-langit.
             </p>
             <div class="grid grid-cols-2 gap-4">
-              <div
-                class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-              >
-                <span class="text-2xl font-bold text-blue-500">5+</span>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Years Experience
-                </p>
+              <div class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 card-hover">
+                <span class="text-2xl font-bold text-blue-500">∞</span>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tahun Pengalaman</p>
               </div>
-              <div
-                class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-              >
-                <span class="text-2xl font-bold text-blue-500">50+</span>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Projects Completed
-                </p>
+              <div class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 card-hover">
+                <span class="text-2xl font-bold text-blue-500">±100</span>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Urusan Ditangani</p>
               </div>
-              <div
-                class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-              >
-                <span class="text-2xl font-bold text-blue-500">30+</span>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Happy Clients
-                </p>
+              <div class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 card-hover">
+                <span class="text-2xl font-bold text-blue-500">∞</span>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Kepuasan Hati</p>
               </div>
-              <div
-                class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-              >
-                <span class="text-2xl font-bold text-blue-500">10+</span>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Open Source
-                </p>
+              <div class="p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 card-hover">
+                <span class="text-2xl font-bold text-blue-500">±42</span>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Cangkir Kopi/Hari</p>
               </div>
             </div>
           </div>
-          <div class="space-y-6">
+          <div class="space-y-6 fade-in-right">
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-medium">Web Development</span>
+                <span class="text-sm font-medium">Ngatur Urusan</span>
+                <span class="text-sm text-blue-500">99%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width: 99%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-medium">Problem Solving</span>
                 <span class="text-sm text-blue-500">95%</span>
               </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 95%"></div>
-              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-medium">UI/UX Design</span>
-                <span class="text-sm text-blue-500">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 85%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="text-sm font-medium">Backend Development</span>
+                <span class="text-sm font-medium">Multitasking</span>
                 <span class="text-sm text-blue-500">90%</span>
               </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 90%"></div>
-              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-medium">DevOps & Cloud</span>
-                <span class="text-sm text-blue-500">75%</span>
+                <span class="text-sm font-medium">Ngopi</span>
+                <span class="text-sm text-blue-500">100%</span>
               </div>
-              <div class="skill-bar">
-                <div class="skill-bar-fill" style="width: 75%"></div>
-              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%"></div></div>
             </div>
           </div>
         </div>
@@ -302,123 +183,78 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20 px-4">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
           <span class="gradient-text">Work Experience</span>
         </h2>
         <div class="relative">
-          <!-- Timeline line -->
-          <div
-            class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 transform md:-translate-x-0.5"
-          ></div>
+          <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 transform md:-translate-x-0.5"></div>
 
-          <!-- Experience 1 -->
-          <div class="relative mb-12">
+          <div class="relative mb-12 fade-in-left">
             <div class="md:flex items-start">
               <div class="hidden md:block md:w-1/2 md:pr-12 text-right">
-                <span
-                  class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium"
-                  >2022 - Present</span
-                >
+                <span class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">2024 - Present</span>
               </div>
               <div class="md:w-1/2 md:pl-12 relative">
-                <div
-                  class="absolute left-[-8px] md:left-[-8px] top-1 timeline-dot"
-                ></div>
+                <div class="absolute left-[-8px] md:left-[-8px] top-1 timeline-dot"></div>
                 <div class="block md:hidden mb-2">
-                  <span
-                    class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium"
-                    >2022 - Present</span
-                  >
+                  <span class="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm rounded-full font-medium">2024 - Present</span>
                 </div>
-                <div
-                  class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-                >
-                  <h3 class="text-lg font-bold mb-1">
-                    Senior Full Stack Developer
-                  </h3>
-                  <p class="text-blue-500 font-medium mb-3">Tech Corp Inc.</p>
-                  <p
-                    class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
-                  >
-                    Lead development of microservices architecture serving 1M+
-                    users. Implemented CI/CD pipelines and mentored junior
-                    developers. Reduced deployment time by 60% using Docker and
-                    Kubernetes.
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover">
+                  <h3 class="text-lg font-bold mb-1">Mentri Segala Urusan</h3>
+                  <p class="text-blue-500 font-medium mb-3">Self-Employed</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Menangani berbagai urusan dari A sampai Z. Mulai dari ngatur jadwal, 
+                    nyelesain masalah teknis, jadi mediator, sampai bantu pilih menu makan siang. 
+                    Semua dilakukan dengan dedikasi tinggi dan secangkir kopi.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="relative mb-12">
+          <div class="relative mb-12 fade-in-right">
             <div class="md:flex items-start">
               <div class="md:w-1/2 md:pr-12 relative md:text-right">
-                <div
-                  class="absolute left-[-8px] md:right-[-8px] md:left-auto top-1 timeline-dot"
-                ></div>
+                <div class="absolute left-[-8px] md:right-[-8px] md:left-auto top-1 timeline-dot"></div>
                 <div class="hidden md:block mb-2">
-                  <span
-                    class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium"
-                    >2019 - 2022</span
-                  >
+                  <span class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">2021 - 2024</span>
                 </div>
-                <div
-                  class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-                >
-                  <h3 class="text-lg font-bold mb-1">Full Stack Developer</h3>
-                  <p class="text-purple-500 font-medium mb-3">StartupXYZ</p>
-                  <p
-                    class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
-                  >
-                    Built and maintained React-based dashboard applications.
-                    Developed RESTful APIs using Node.js and PostgreSQL.
-                    Collaborated in an agile team of 10 developers.
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover">
+                  <h3 class="text-lg font-bold mb-1">Senior Problem Solver</h3>
+                  <p class="text-purple-500 font-medium mb-3">Various Companies</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Ditugaskan ke berbagai perusahaan untuk menyelesaikan masalah-masalah 
+                    pelik yang gak ada yang mau urus. Berhasil menurunkan tingkat stres tim 
+                    sebesar 60% dan meningkatkan produktivitas kantor.
                   </p>
                 </div>
               </div>
               <div class="hidden md:block md:w-1/2"></div>
               <div class="block md:hidden mt-4 relative">
                 <div class="mb-2">
-                  <span
-                    class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium"
-                    >2019 - 2022</span
-                  >
+                  <span class="inline-block px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-sm rounded-full font-medium">2021 - 2024</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Experience 3 -->
-          <div class="relative mb-12">
+          <div class="relative mb-12 fade-in-left">
             <div class="md:flex items-start">
               <div class="hidden md:block md:w-1/2 md:pr-12 text-right">
-                <span
-                  class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium"
-                  >2017 - 2019</span
-                >
+                <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium">2018 - 2021</span>
               </div>
               <div class="md:w-1/2 md:pl-12 relative">
-                <div
-                  class="absolute left-[-8px] md:left-[-8px] top-1 timeline-dot"
-                ></div>
+                <div class="absolute left-[-8px] md:left-[-8px] top-1 timeline-dot"></div>
                 <div class="block md:hidden mb-2">
-                  <span
-                    class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium"
-                    >2017 - 2019</span
-                  >
+                  <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm rounded-full font-medium">2018 - 2021</span>
                 </div>
-                <div
-                  class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-                >
-                  <h3 class="text-lg font-bold mb-1">Junior Web Developer</h3>
-                  <p class="text-green-500 font-medium mb-3">WebAgency Co.</p>
-                  <p
-                    class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
-                  >
-                    Developed responsive websites for various clients. Worked
-                    with HTML, CSS, JavaScript, and WordPress. Improved page
-                    load speeds by 40% through optimization.
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover">
+                  <h3 class="text-lg font-bold mb-1">Junior Everything Officer</h3>
+                  <p class="text-green-500 font-medium mb-3">Startup Environment</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Memulai karir sebagai orang yang ngelakuin semuanya. Dari bantuin IT support, 
+                    bikin kopi buat rapat, sampai jadi tim marketing dadakan. Pengalaman berharga 
+                    yang membentuk jadi serba bisa.
                   </p>
                 </div>
               </div>
@@ -431,74 +267,40 @@
     <!-- Education Section -->
     <section id="education" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
           <span class="gradient-text">Education</span>
         </h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <div
-            class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-          >
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in">
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full font-medium"
-                >2013 - 2017</span
-              >
-              <svg
-                class="w-8 h-8 text-blue-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <span class="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full font-medium">2014 - 2018</span>
+              <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path
-                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                />
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
               </svg>
             </div>
-            <h3 class="text-lg font-bold mb-1">Bachelor of Computer Science</h3>
-            <p class="text-blue-500 font-medium mb-3">
-              University of Technology
-            </p>
+            <h3 class="text-lg font-bold mb-1">Bachelor of Everything</h3>
+            <p class="text-blue-500 font-medium mb-3">University of Life</p>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-              GPA: 3.85/4.00. Dean's List recipient. Active member of the Web
-              Development Club. Final project: Built a real-time collaborative
-              code editor.
+              Lulus dengan predikat "Bisa Diandalkan". Aktif di berbagai organisasi 
+              dan kegiatan multitasking. Tugas akhir: "Cara Efektif Ngatur Banyak Urusan 
+              Sekaligus Tanpa Pusing."
             </p>
           </div>
-          <div
-            class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-          >
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in delay-200">
             <div class="flex items-center justify-between mb-4">
-              <span
-                class="text-sm px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full font-medium"
-                >Certification</span
-              >
-              <svg
-                class="w-8 h-8 text-purple-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                />
+              <span class="text-sm px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full font-medium">Certification</span>
+              <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
             </div>
-            <h3 class="text-lg font-bold mb-1">AWS Certified Developer</h3>
-            <p class="text-purple-500 font-medium mb-3">Amazon Web Services</p>
+            <h3 class="text-lg font-bold mb-1">Certified Multitasker</h3>
+            <p class="text-purple-500 font-medium mb-3">International Bureau of Urusan</p>
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-              Associate level certification. Proficient in AWS Lambda, API
-              Gateway, DynamoDB, S3, EC2, and CloudFormation. Experienced in
-              serverless architecture.
+              Sertifikasi internasional dalam menangani banyak urusan sekaligus. 
+              Ahli dalam prioritasasi, delegasi, dan yang paling penting — tahu kapan 
+              harus istirahat sambil ngopi.
             </p>
           </div>
         </div>
@@ -508,180 +310,167 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-4">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span class="gradient-text">Skills & Technologies</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
+          <span class="gradient-text">Skills & Expertise</span>
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">⚛️</span>
-            <span class="text-sm font-medium">React</span>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale">
+            <span class="text-3xl mb-2 block">📋</span>
+            <span class="text-sm font-medium">Ngatur Urusan</span>
           </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">🟢</span>
-            <span class="text-sm font-medium">Node.js</span>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-100">
+            <span class="text-3xl mb-2 block">🧠</span>
+            <span class="text-sm font-medium">Problem Solving</span>
           </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">🔷</span>
-            <span class="text-sm font-medium">TypeScript</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">🐘</span>
-            <span class="text-sm font-medium">PostgreSQL</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">🍃</span>
-            <span class="text-sm font-medium">MongoDB</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">🐳</span>
-            <span class="text-sm font-medium">Docker</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">☁️</span>
-            <span class="text-sm font-medium">AWS</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">🎨</span>
-            <span class="text-sm font-medium">Tailwind CSS</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">📱</span>
-            <span class="text-sm font-medium">React Native</span>
-          </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-200">
             <span class="text-3xl mb-2 block">🔄</span>
-            <span class="text-sm font-medium">GraphQL</span>
+            <span class="text-sm font-medium">Multitasking</span>
           </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-300">
+            <span class="text-3xl mb-2 block">☕</span>
+            <span class="text-sm font-medium">Kopi</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-100">
+            <span class="text-3xl mb-2 block">💬</span>
+            <span class="text-sm font-medium">Komunikasi</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-200">
+            <span class="text-3xl mb-2 block">🤝</span>
+            <span class="text-sm font-medium">Negosiasi</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-300">
+            <span class="text-3xl mb-2 block">🕐</span>
+            <span class="text-sm font-medium">Manajemen Waktu</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-400">
+            <span class="text-3xl mb-2 block">🧘</span>
+            <span class="text-sm font-medium">Tetap Tenang</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-200">
             <span class="text-3xl mb-2 block">🔧</span>
-            <span class="text-sm font-medium">Git</span>
+            <span class="text-sm font-medium">Teknis Serba-Serbi</span>
           </div>
-          <div
-            class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover"
-          >
-            <span class="text-3xl mb-2 block">📊</span>
-            <span class="text-sm font-medium">Redis</span>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-300">
+            <span class="text-3xl mb-2 block">🎯</span>
+            <span class="text-sm font-medium">Target Oriented</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-400">
+            <span class="text-3xl mb-2 block">🎭</span>
+            <span class="text-sm font-medium">Adaptability</span>
+          </div>
+          <div class="p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center card-hover fade-in-scale delay-500">
+            <span class="text-3xl mb-2 block">🌟</span>
+            <span class="text-sm font-medium">Karisma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
+          <span class="gradient-text">What People Say</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center text-blue-500 font-bold text-lg">A</div>
+              <div>
+                <p class="font-semibold text-sm">Asep</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Klien Tetap</p>
+              </div>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic">
+              "Bahlil itu orangnya luar biasa. Apapun urusannya, pasti beres. 
+              Gua kasih masalah rumit, balik-balik udah kelar plus ada kopinya."
+            </p>
+            <div class="mt-3 text-yellow-400 text-sm">★★★★★</div>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in delay-200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center text-purple-500 font-bold text-lg">S</div>
+              <div>
+                <p class="font-semibold text-sm">Siti</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Rekan Kerja</p>
+              </div>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic">
+              "Kerja sama sama Bahlil tuh enak banget. Dia bisa handle banyak hal 
+              sekaligus tanpa keliatan stress. Inspirasi banget buat kita semua."
+            </p>
+            <div class="mt-3 text-yellow-400 text-sm">★★★★★</div>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in delay-400">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-500 font-bold text-lg">B</div>
+              <div>
+                <p class="font-semibold text-sm">Budi</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">Mantan Bos</p>
+              </div>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed italic">
+              "Dia tipe orang yang kamu cari kalo ada masalah. Gak banyak drama, 
+              langsung eksekusi. Plus, kopi bikinan dia enak banget."
+            </p>
+            <div class="mt-3 text-yellow-400 text-sm">★★★★★</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
+    <section id="projects" class="py-20 px-4">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
           <span class="gradient-text">Featured Projects</span>
         </h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center"
-            >
-              <span class="text-6xl">🛒</span>
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden card-hover fade-in">
+            <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <span class="text-6xl">📋</span>
             </div>
             <div class="p-6">
-              <h3 class="text-lg font-bold mb-2">E-Commerce Platform</h3>
+              <h3 class="text-lg font-bold mb-2">Sistem Manajemen Urusan</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
-                Full-stack e-commerce platform with real-time inventory
-                management, payment integration, and admin dashboard.
+                Aplikasi untuk ngatur semua urusan dalam satu tempat. Fitur prioritas otomatis, 
+                pengingat minum kopi, dan mode "santai" untuk hari libur.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full"
-                  >React</span
-                >
-                <span
-                  class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full"
-                  >Node.js</span
-                >
-                <span
-                  class="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs rounded-full"
-                  >MongoDB</span
-                >
+                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full">Kreativitas</span>
+                <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full">Efisiensi</span>
               </div>
             </div>
           </div>
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center"
-            >
-              <span class="text-6xl">💬</span>
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden card-hover fade-in delay-200">
+            <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+              <span class="text-6xl">☕</span>
             </div>
             <div class="p-6">
-              <h3 class="text-lg font-bold mb-2">Real-time Chat App</h3>
+              <h3 class="text-lg font-bold mb-2">Kopi & Konsultasi</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
-                Real-time messaging application with WebSocket support, user
-                authentication, file sharing, and notifications.
+                Program di mana setiap sesi konsultasi urusan selalu ditemani secangkir kopi pilihan. 
+                Masalah kelar, perut juga hangat.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full"
-                  >Next.js</span
-                >
-                <span
-                  class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full"
-                  >Socket.io</span
-                >
-                <span
-                  class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full"
-                  >PostgreSQL</span
-                >
+                <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 text-xs rounded-full">Kopi</span>
+                <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs rounded-full">Konsultasi</span>
               </div>
             </div>
           </div>
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center"
-            >
-              <span class="text-6xl">📊</span>
+          <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden card-hover fade-in delay-400">
+            <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+              <span class="text-6xl">🔄</span>
             </div>
             <div class="p-6">
-              <h3 class="text-lg font-bold mb-2">Analytics Dashboard</h3>
+              <h3 class="text-lg font-bold mb-2">Problem Solver Toolkit</h3>
               <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
-                Interactive dashboard with data visualization, custom reports,
-                real-time metrics, and export functionality.
+                Kumpulan tools dan framework untuk nyelesain masalah dengan cepat. 
+                Dari yang simpel sampai yang bikin pusing tujuh keliling.
               </p>
               <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs rounded-full"
-                  >React</span
-                >
-                <span
-                  class="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full"
-                  >D3.js</span
-                >
-                <span
-                  class="px-2 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs rounded-full"
-                  >Express</span
-                >
+                <span class="px-2 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs rounded-full">Tools</span>
+                <span class="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs rounded-full">Framework</span>
               </div>
             </div>
           </div>
@@ -690,149 +479,83 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4">
+    <section id="contact" class="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
       <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">
           <span class="gradient-text">Get In Touch</span>
         </h2>
         <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <div
-            class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-          >
-            <div
-              class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0"
-            >
-              <svg
-                class="w-6 h-6 text-blue-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
+          <div class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div>
               <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
-              <p class="font-medium">john.doe@example.com</p>
+              <p class="font-medium">bahlil@urusan.id</p>
             </div>
           </div>
-          <div
-            class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-          >
-            <div
-              class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0"
-            >
-              <svg
-                class="w-6 h-6 text-purple-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
+          <div class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover fade-in delay-200">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <div>
               <p class="text-sm text-gray-500 dark:text-gray-400">Location</p>
-              <p class="font-medium">Jakarta, Indonesia</p>
-            </div>
-          </div>
-          <div
-            class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-          >
-            <div
-              class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0"
-            >
-              <svg
-                class="w-6 h-6 text-green-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"
-                />
-              </svg>
-            </div>
-            <div>
-              <p class="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
-              <p class="font-medium">linkedin.com/in/johndoe</p>
-            </div>
-          </div>
-          <div
-            class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 card-hover"
-          >
-            <div
-              class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0"
-            >
-              <svg
-                class="w-6 h-6 text-gray-600 dark:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                />
-              </svg>
-            </div>
-            <div>
-              <p class="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
-              <p class="font-medium">github.com/johndoe</p>
+              <p class="font-medium">Indonesia</p>
             </div>
           </div>
         </div>
-        <form class="space-y-4">
-          <div class="grid md:grid-cols-2 gap-4">
+
+        <!-- Contact Form -->
+        <div class="contact-form-section bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 md:p-8 fade-in">
+          <h3 class="text-xl font-bold mb-6">Send a Message</h3>
+          <form id="contact-form" class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <input
+                id="form-name"
+                type="text"
+                placeholder="Your Name"
+                required
+                class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
+              />
+              <input
+                id="form-email"
+                type="email"
+                placeholder="Your Email"
+                required
+                class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
+              />
+            </div>
             <input
+              id="form-subject"
               type="text"
-              placeholder="Your Name"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
+              placeholder="Subject"
+              required
+              class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
             />
-            <input
-              type="email"
-              placeholder="Your Email"
-              class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
-            />
+            <textarea
+              id="form-message"
+              rows="5"
+              placeholder="Your Message"
+              required
+              class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
+            ></textarea>
+            <button
+              type="submit"
+              id="form-submit"
+              class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-blue-500/25"
+            >
+              Send Message
+            </button>
+          </form>
+          <div id="form-success" class="hidden mt-4 p-4 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg text-center font-medium">
+            ✓ Message sent! I'll get back to you as soon as possible.
           </div>
-          <input
-            type="text"
-            placeholder="Subject"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
-          />
-          <textarea
-            rows="5"
-            placeholder="Your Message"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all placeholder-gray-400"
-          ></textarea>
-          <button
-            type="submit"
-            class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-          >
-            Send Message
-          </button>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -840,14 +563,13 @@
     <footer class="py-8 px-4 border-t border-gray-200 dark:border-gray-700">
       <div class="max-w-5xl mx-auto text-center">
         <p class="text-gray-500 dark:text-gray-400 text-sm">
-          &copy; 2026 John Doe. All rights reserved. Built with
+          &copy; 2026 Bahlil Si Rajagukguk. All rights reserved. Built with
           <span class="text-blue-500">Tailwind CSS</span> &
           <span class="text-green-500">Node.js</span>
         </p>
       </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
       // Theme Toggle
       const themeToggle = document.getElementById("theme-toggle");
@@ -871,14 +593,13 @@
         mobileMenu.classList.toggle("hidden");
       });
 
-      // Close mobile menu on link click
       document.querySelectorAll("#mobile-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
         });
       });
 
-      // Smooth scroll for navigation links
+      // Smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -889,23 +610,106 @@
         });
       });
 
-      // Animate skill bars on scroll
+      // Typing animation
+      const typingEl = document.getElementById("typing-text");
+      const phrases = [
+        "Mentri Segala Urusan",
+        "Problem Solver",
+        "Multitasker Handal",
+        "Pecinta Kopi Sejati",
+      ];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let isPaused = false;
+
+      function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+        if (!isDeleting) {
+          typingEl.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+          if (charIndex === currentPhrase.length) {
+            isPaused = true;
+            setTimeout(() => { isPaused = false; isDeleting = true; }, 2000);
+          }
+        } else {
+          typingEl.textContent = currentPhrase.substring(0, charIndex);
+          charIndex--;
+          if (charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+          }
+        }
+        if (!isPaused) {
+          setTimeout(typeEffect, isDeleting ? 40 : 80);
+        } else {
+          setTimeout(typeEffect, 100);
+        }
+      }
+      typeEffect();
+
+      // Scroll animations
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.style.width =
-                entry.target.getAttribute("data-width");
+              entry.target.classList.add("visible");
             }
           });
         },
-        { threshold: 0.5 },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      );
+
+      document.querySelectorAll(".fade-in, .fade-in-left, .fade-in-right, .fade-in-scale").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Skill bar animation
+      const skillObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.width = entry.target.getAttribute("data-width");
+            }
+          });
+        },
+        { threshold: 0.5 }
       );
 
       document.querySelectorAll(".skill-bar-fill").forEach((bar) => {
         bar.setAttribute("data-width", bar.style.width);
         bar.style.width = "0%";
-        observer.observe(bar);
+        skillObserver.observe(bar);
+      });
+
+      // Contact form
+      const contactForm = document.getElementById("contact-form");
+      const formSuccess = document.getElementById("form-success");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("form-name").value.trim();
+        const email = document.getElementById("form-email").value.trim();
+        const subject = document.getElementById("form-subject").value.trim();
+        const message = document.getElementById("form-message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        if (!email.includes("@") || !email.includes(".")) {
+          alert("Please enter a valid email.");
+          return;
+        }
+
+        const mailtoLink = `mailto:bahlil@urusan.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("From: " + name + "\nEmail: " + email + "\n\n" + message)}`;
+        window.open(mailtoLink);
+
+        contactForm.reset();
+        formSuccess.classList.remove("hidden");
+        setTimeout(() => formSuccess.classList.add("hidden"), 5000);
       });
     </script>
   </body>

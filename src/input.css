@@ -2,7 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Custom styles */
 html {
   scroll-behavior: smooth;
 }
@@ -32,9 +31,13 @@ body {
   @apply bg-gray-500 dark:bg-gray-500;
 }
 
-/* Gradient text animation */
+/* Gradient text */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600;
+}
+
+.gradient-text-reverse {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600;
 }
 
 /* Card hover effect */
@@ -54,4 +57,166 @@ body {
 
 .skill-bar-fill {
   @apply h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-1000;
+}
+
+/* Fade-in scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Delay classes */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Typing cursor animation */
+.typing-cursor::after {
+  content: "|";
+  animation: blink 0.8s step-end infinite;
+  @apply text-blue-500;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Glow effect for hero */
+.glow {
+  box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.3);
+}
+
+/* Print styles */
+@media print {
+  nav, #theme-toggle, #menu-toggle, #mobile-menu,
+  .contact-form-section, footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  section {
+    padding: 1.5rem 0 !important;
+    page-break-inside: avoid;
+    background: white !important;
+  }
+
+  .dark\:bg-gray-900,
+  .dark\:bg-gray-800\/50,
+  .dark\:bg-gray-800 {
+    background: white !important;
+  }
+
+  .dark\:text-gray-100,
+  .dark\:text-gray-400,
+  .dark\:text-gray-500,
+  .text-gray-500,
+  .text-gray-600,
+  .text-gray-400 {
+    color: #333 !important;
+  }
+
+  .border-gray-200,
+  .dark\:border-gray-700 {
+    border-color: #ddd !important;
+  }
+
+  .gradient-text {
+    background: none !important;
+    color: #2563eb !important;
+    -webkit-text-fill-color: #2563eb !important;
+  }
+
+  .card-hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .skill-bar-fill {
+    width: 100% !important;
+  }
+
+  .timeline-dot {
+    border-color: white !important;
+  }
+
+  .glow {
+    box-shadow: none !important;
+  }
+
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+
+  .fade-in, .fade-in-left, .fade-in-right, .fade-in-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  img {
+    max-width: 120px !important;
+  }
+
+  .h-48 {
+    height: 120px !important;
+  }
+
+  #contact {
+    page-break-before: always;
+  }
+
+  .bg-gradient-to-br {
+    background: #f0f0f0 !important;
+  }
 }
